@@ -1,13 +1,9 @@
-const withNextra = require("nextra")({
-  theme: "nextra-theme-docs",
-  themeConfig: "./theme.config.js",
-  unstable_flexsearch: true,
-  unstable_staticImage: true,
-});
+import nextra from 'nextra'
 
-const nextConfig = withNextra({
-  reactStrictMode: true,
-  experimental: {
-    legacyBrowsers: false,
-  },
-});
+const withNextra = nextra({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.js',
+  staticImage: true,
+  latex: true,
+  defaultShowCopyCode: true,
+})
