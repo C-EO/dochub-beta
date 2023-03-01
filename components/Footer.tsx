@@ -158,7 +158,7 @@ export function FooterContent() {
           </div>
         </div>
 
-        <div className="pt-8 mt-8 sm:flex sm:items-center sm:justify-between">
+        <div className="pt-8 mt-8 sm:flex sm:items-center sm:justify-between nx-text-gray-600 dark:nx-text-gray-400">
           <div>
             <span>
               <a href="/legal/license" target="_blank">
