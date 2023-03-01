@@ -3,8 +3,9 @@ import Link from "next/link";
 import { useState, ReactNode, ReactElement } from "react";
 import cn from "classnames";
 import { ThemeSwitch } from "nextra-theme-docs";
-import VercelLogo from "./logos/Vercel";
 import { useTurboSite, TurboSite } from "./SiteSwitcher";
+
+const NITEHUB_URL = "https://git.c-eo.repl.co";
 
 function FooterLink({ href, children }: { href: string; children: ReactNode }) {
   const classes =
@@ -159,19 +160,16 @@ export function FooterContent() {
 
         <div className="pt-8 mt-8 sm:flex sm:items-center sm:justify-between">
           <div>
-            <a
-              className="text-current"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="vercel.com homepage"
-              href="https://vercel.com?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-logoLink"
-            >
-              <VercelLogo />
-            </a>
-            <p className="mt-4 text-xs text-gray-500 dark:text-[#888888]">
-              &copy; {new Date().getFullYear()} Vercel, Inc. All rights
-              reserved.
-            </p>
+            <span>
+              <a href="/legal/license" target="_blank">
+                <b>CC-BY-4.0</b>
+              </a>{ " " }
+              Copyright © { new Date().getFullYear() }{ " " }
+              <a href={ NITEHUB_URL } target="_blank">
+                Nitehub Org.
+              </a>{ " " }
+              All rights reserved.
+            </span>
           </div>
         </div>
       </div>
