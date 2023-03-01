@@ -57,7 +57,7 @@ const config: DocsThemeConfig = {
       return {
         titleTemplate: 'Nitehub'
       } 
-    } else if (asPath === ('/pack') {
+    } else if (asPath === '/pack') {
         return {
           titleTemplate: '%s – Nitehub Documentation'
         }
