@@ -50,24 +50,25 @@ const config: DocsThemeConfig = {
       <link rel="shortcut icon" href={`/images/favicon-${systemTheme}/favicon.ico`}/>
     </>
   },
-  useNextSeoProps() {
-    const { asPath } = useRouter()
+  useNextSeoProps: function SEO() {
+    const router = useRouter();
+    const { frontMatter } = useConfig();
+
+    let section = "Nitehub Official Documentation";
     
-    if (asPath === '/') {
-      return {
-        titleTemplate: 'Nitehub Official Documentation'
-      } 
-    } 
-    if (asPath !== '/pack') {
-       return {
-         titleTemplate: '%s – Nitecel'
-       }
-    } 
-    if (asPath !== '/repo') {
-       return {
-         titleTemplate: '%s – Nitehub Documentation'
-       }
+    if (router?.pathname.startsWith("/pack")) {
+      section = "Nitecel";
     }
+    if (router?.pathname.startsWith("/repo")) {
+      section = "Nitehub Documentation";
+    }
+
+    const defaultTitle = frontMatter.overrideTitle || section;
+
+    return {
+      defaultTitle,
+      titleTemplate: `%s – ${section}`,
+    };
   },
   darkMode: true,
   banner: {
