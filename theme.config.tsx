@@ -20,7 +20,7 @@ const config: DocsThemeConfig = {
       </>
     ),
   },
-  docsRepositoryBase: "https://github.com/C-EO/turbo/blob/main/",
+  docsRepositoryBase: "https://github.com/C-EO/dochub-beta/blob/main/",
   footer: {
     component: Footer,
   },
