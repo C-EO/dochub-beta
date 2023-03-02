@@ -31,12 +31,38 @@ const config: DocsThemeConfig = {
     component: Footer,
   },
   head: () => {
-    const { asPath, defaultLocale, locale } = useRouter()
+//     const { asPath, defaultLocale, locale } = useRouter()
+//     const { systemTheme = "dark" } = useTheme();
+//     const { frontMatter } = useConfig()
+//     const url =
+//       'https://dochub.vercel.app' +
+//       (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+    const router = useRouter();
     const { systemTheme = "dark" } = useTheme();
-    const { frontMatter } = useConfig()
+    const { frontMatter } = useConfig();
     const url =
-      'https://dochub.vercel.app' +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+      router.asPath === "/" ? SITE_ROOT : `${SITE_ROOT}${router.asPath}`;
+
+    const asPath = router.asPath;
+
+    let ogUrl;
+
+    if (asPath === "/") {
+      ogUrl = `${SITE_ROOT}/api/og`;
+    } else if (frontMatter?.ogImage) {
+      ogUrl = `${SITE_ROOT}${frontMatter.ogImage}`;
+    } else {
+      const type = asPath.startsWith("/repo")
+        ? "repo"
+        : asPath.startsWith("/pack")
+        ? "pack"
+        : "";
+      const title = frontMatter.title
+        ? `&title=${encodeURIComponent(frontMatter.title)}`
+        : "";
+
+      ogUrl = `${SITE_ROOT}/api/og?type=${type}${title}`;
+    }
       
     return <>
       <meta property="og:type" content="website" />
@@ -61,42 +87,24 @@ const config: DocsThemeConfig = {
       <link rel="prefetch" href="/pack/docs" as="document"/>
     </>
   },
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    if (asPath !== '/') {
-      return {
-        titleTemplate: '%s – Nitehub Documentation'
-      } 
+  useNextSeoProps: function SEO() {
+    const router = useRouter();
+    const { frontMatter } = useConfig();
+
+    let section = "Nitehub Documentation";
+    if (router?.pathname.startsWith("/pack")) {
+      section = "Nitehub Documentation";
+    }
+    if (router?.pathname.startsWith("/repo")) {
+      section = "Nitecel";
     }
 
-    if (asPath === '/') {
-      return {
-        titleTemplate: 'Nitehub Documentation'
-      }
-    };
-    
-    if (asPath !== '/repo') {
-      return {
-        titleTemplate: '%s – Nitehub Documentation'
-      } 
-    }
-    
-    if (asPath === '/repo') {
-      return {
-        titleTemplate: 'Nitehub Documentation'
-      }
-    };
-    
-    if (asPath !== '/pack') {
-          return {
-            titleTemplate: '%s - Nitecel'
-        }
-    }
-    
-    if (asPath === '/pack') {
-      return {
-        titleTemplate: 'Nitecel'
-      }
+    const defaultTitle = frontMatter.overrideTitle || section;
+
+    return {
+      description: frontMatter.description,
+      defaultTitle,
+      titleTemplate: `%s – ${section}`,
     };
   },
   darkMode: true,
