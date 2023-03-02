@@ -57,24 +57,14 @@ const config: DocsThemeConfig = {
       return {
         titleTemplate: 'Nitehub Official Documentation'
       } 
-    } else if (asPath === '/pack') {
+    } else if (asPath === '/pack' && asPath !== '/pack/index') {
         return {
           titleTemplate: '%s – Nitecel'
         }
-      if (asPath !== '/pack') {
-          return {
-              titleTemplate: '%s – Nitecel'
-            }
-      }
-    } else if (asPath === '/repo') {
+    } else if (asPath === '/repo' && asPath !== '/repo/index') {
         return {
           titleTemplate: '%s – Nitehub Documentation'
         }
-      if (asPath !== '/repo') {
-          return {
-              titleTemplate: '%s – Nitehub Documentation'
-            }
-      }
     }
   },
   darkMode: true,
