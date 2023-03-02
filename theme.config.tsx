@@ -57,13 +57,21 @@ const config: DocsThemeConfig = {
       return {
         titleTemplate: 'Nitehub Official Documentation'
       } 
-    } else if (asPath === '/pack' && asPath !== '/pack/index') {
+    } else if (asPath === '/pack/index') {
         return {
-          titleTemplate: '%s – Nitecel'
+          titleTemplate: 'Nitecel'
         }
-    } else if (asPath === '/repo' && asPath !== '/repo/index') {
+    } else if (asPath !== '/pack/index') {
         return {
-          titleTemplate: '%s – Nitehub Documentation'
+           titleTemplate: '%s – Nitecel'
+        }
+    } else if (asPath === '/repo/index' && asPath !== '/repo/index') {
+        return {
+          titleTemplate: 'Nitehub Documentation'
+        }
+    } else if (asPath !== '/repo/index') {
+        return {
+           titleTemplate: '%s – Nitehub Documentation'
         }
     }
   },
