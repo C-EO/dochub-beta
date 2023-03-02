@@ -63,7 +63,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     const { asPath } = useRouter()
-    if (asPath !== '/pack' && !== '/' && !== '/repo') {
+    if (asPath !== '/pack' && asPath !== '/' && asPath !== '/repo') {
       return {
         titleTemplate: '%s – Nitehub Documentation'
       }
