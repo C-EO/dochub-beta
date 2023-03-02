@@ -74,7 +74,13 @@ const config: DocsThemeConfig = {
 //         }
 //     };
     
-    if (asPath === '/' && asPath === '/repo') {
+    if (asPath === '/') {
+      return {
+        titleTemplate: 'Nitehub Documentation'
+      }
+    };
+    
+    if (asPath === '/repo') {
       return {
         titleTemplate: 'Nitehub Documentation'
       }
