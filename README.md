@@ -4,9 +4,9 @@
 ![GitHub](https://img.shields.io/github/license/c-eo/dochub-beta?style=for-the-badge)
 
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+This documentation was created using [Nextra](https://nextra.site).
 
-[**Live Demo →**]([https://nextra-docs-template.vercel.app](https://dochub-beta.vercel.app))
+[**Live Demo →**](https://dochub-beta.vercel.app)
 
 [![](https://user-images.githubusercontent.com/85847352/222398742-53db43c8-3878-4268-acfb-799f98d3b47d.png)](https://dochub-beta.vercel.app)
 
