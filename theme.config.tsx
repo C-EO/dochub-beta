@@ -66,7 +66,10 @@ const config: DocsThemeConfig = {
     if (asPath !== '/' && asPath !== '/repo') {
       return {
         titleTemplate: '%s – Nitehub Documentation'
-      }
+      } else if (asPath !== '/pack') {
+          return {
+            titleTemplate: '%s - Nitecel'
+        }
     }; 
 //     else {
 //         return {
@@ -86,11 +89,6 @@ const config: DocsThemeConfig = {
       }
     };
     
-    if (asPath !== '/pack') {
-      return {
-        titleTemplate: '%s - Nitecel'
-      }
-    };
     
     if (asPath === '/pack') {
       return {
