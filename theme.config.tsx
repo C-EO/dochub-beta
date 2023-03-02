@@ -66,6 +66,7 @@ const config: DocsThemeConfig = {
     const defaultTitle = frontMatter.overrideTitle || section;
 
     return {
+      description: frontMatter.description,
       defaultTitle,
       titleTemplate: `%s – ${section}`,
     };
