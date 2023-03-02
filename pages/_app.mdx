@@ -12,12 +12,12 @@ type NextraAppProps = AppProps & {
   };
 };
 
-// Shim requestIdleCallback in Safari
-if (typeof window !== "undefined" && !("requestIdleCallback" in window)) {
+<!-- // Shim requestIdleCallback in Safari -->
+<!-- if (typeof window !== "undefined" && !("requestIdleCallback" in window)) {
   window.requestIdleCallback = (fn) => setTimeout(fn, 1);
   window.cancelIdleCallback = (e) => clearTimeout(e);
 }
-
+ -->
 export default function Nextra({ Component, pageProps }: NextraAppProps) {
   return (
     <SSRProvider>
