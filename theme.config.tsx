@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 import Navigation from "./components/Navigation";
 import HeaderLogo from "./components/HeaderLogo";
 import ExtraContent from "./components/ExtraContent";
-import { Github, Discord } from "./components/Social";
+// import { Github, Discord } from "./components/Social";
 
 const SITE_ROOT = "https://dochub-beta.vercel.app";
 
@@ -13,12 +13,18 @@ const config: DocsThemeConfig = {
   logo: HeaderLogo,
   navbar: {
     component: Navigation,
-    extraContent: (
-      <>
-        <Github />
-        <Discord />
-      </>
-    ),
+//     extraContent: (
+//       <>
+//         <Github />
+//         <Discord />
+//       </>
+//     ),
+  },
+  project: {
+    link: "https://github.com/nitehub-org/",
+  },
+  chat: {
+    link: "https://discord.gg/tEcXZ2FVuz",
   },
   docsRepositoryBase: "https://github.com/C-EO/dochub-beta/blob/main/",
   footer: {
