@@ -25,8 +25,8 @@ const config: DocsThemeConfig = {
     component: Footer,
   },
   head: () => {
-    const { systemTheme = "dark" } = useTheme();
     const { asPath, defaultLocale, locale } = useRouter()
+    const { systemTheme = "dark" } = useTheme();
     const { frontMatter } = useConfig()
     const url =
       'https://dochub.vercel.app' +
@@ -43,11 +43,16 @@ const config: DocsThemeConfig = {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@nitehub_org" />
       <meta name="twitter:creator" content="@nitehub_org" />
+      <link rel="apple-touch-icon" sizes="180x180" href={`/images/favicon-${systemTheme}/apple-touch-icon.png`}/>
+      <link rel="icon" type="image/png" sizes="32x32" href={`/images/favicon-${systemTheme}/favicon-32x32.png`}/>
+      <link rel="icon" type="image/png" sizes="16x16" href={`/images/favicon-${systemTheme}/favicon-16x16.png`}/>
+      <link rel="mask-icon" href={`/images/favicon-${systemTheme}/safari-pinned-tab.svg`} color="#000000"/>
+      <link rel="shortcut icon" href={`/images/favicon-${systemTheme}/favicon.ico`}/>
+      <link rel="shortcut icon" href={`/images/favicon-${systemTheme}/favicon.ico`}/>
       <link rel="prefetch" href="/repo" as="document"/>
       <link rel="prefetch" href="/repo/docs" as="document"/>
       <link rel="prefetch" href="/pack" as="document"/>
       <link rel="prefetch" href="/pack/docs" as="document"/>
-      <link rel="shortcut icon" href={`/images/favicon-${systemTheme}/favicon.ico`}/>
     </>
   },
   useNextSeoProps: function SEO() {
