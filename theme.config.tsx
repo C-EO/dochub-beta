@@ -61,26 +61,17 @@ const config: DocsThemeConfig = {
       <link rel="prefetch" href="/pack/docs" as="document"/>
     </>
   },
-  useNextSeoProps: function SEO() {
-    const router = useRouter();
-    const { frontMatter } = useConfig();
-
-    let section = "Nitehub Official Documentation";
-    
-    if (router?.pathname.startsWith("/pack")) {
-      section = "Nitecel";
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – Nitehub Documentation'
+      }
+    } else if (asPath === '/pack') {
+        return {
+          titleTemplate: 'Nitecel'
+        }
     }
-    if (router?.pathname.startsWith("/repo")) {
-      section = "Nitehub Documentation";
-    }
-
-    const defaultTitle = frontMatter.overrideTitle || section;
-
-    return {
-      description: frontMatter.description,
-      defaultTitle,
-      titleTemplate: `%s – ${section}`,
-    };
   },
   darkMode: true,
   banner: {
