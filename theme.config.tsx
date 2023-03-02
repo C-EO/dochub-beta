@@ -57,17 +57,9 @@ const config: DocsThemeConfig = {
       return {
         titleTemplate: 'Nitehub Official Documentation'
       } 
-    } else if (asPath === '/pack') {
-        return {
-          titleTemplate: 'Nitecel'
-        }
     } else if (asPath !== '/pack') {
         return {
            titleTemplate: '%s – Nitecel'
-        }
-    } else if (asPath === '/repo') {
-        return {
-          titleTemplate: 'Nitehub Documentation'
         }
     } else if (asPath !== '/repo') {
         return {
