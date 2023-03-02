@@ -55,15 +55,15 @@ const config: DocsThemeConfig = {
     
     if (asPath === '/') {
       return {
-        titleTemplate: 'Nitehub'
+        titleTemplate: 'Nitehub Official Documentation'
       } 
     } else if (asPath === '/pack') {
         return {
-          titleTemplate: '%s – Nitehub Documentation'
+          titleTemplate: '%s – Nitecel'
         }
     } else if (asPath === '/repo') {
         return {
-          titleTemplate: '%s – Nitecel'
+          titleTemplate: '%s – Nitehub Documentation'
         }
     }
   },
