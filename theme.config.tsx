@@ -65,7 +65,7 @@ const config: DocsThemeConfig = {
         return {
            titleTemplate: '%s – Nitecel'
         }
-    } else if (asPath === '/repo/index' && asPath !== '/repo/index') {
+    } else if (asPath === '/repo/index') {
         return {
           titleTemplate: 'Nitehub Documentation'
         }
