@@ -1,18 +1,27 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
+  "name": "dochub",
+  "version": "1.0.0-beta",
   "private": true,
-  "description": "turbo.build",
+  "description": "Nitehub Official Documentation",
   "scripts": {
     "dev": "next",
     "start": "next start",
     "build": "next build ",
     "lint": "next lint",
     "rss": "node scripts/generate-rss.js",
-    "schema": "turbo-gen ./public/schema.json"
+    "schema": "turbo-gen ./public/schema.json",
+    "postbuild": "next-sitemap"
   },
-  "author": "Jared Palmer",
+  "author": "Dennis Sebalemba <dennis.sebalemba@gmail.com>",
   "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-eo/dochub-beta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/c-eo/dochub-beta/issues"
+  },
+  "homepage": "https://dochub-beta.vercel.app",
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "1.0.6",
@@ -29,6 +38,7 @@
     "next-themes": "^0.2.0",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
+    "next-sitemap": "^4.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swr": "1.3.0"
