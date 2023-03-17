@@ -16,9 +16,11 @@ import RepoLogo from "../../logos/RepoLogo";
 
 function Background() {
   return (
-    <Head>
-        <title>Nitehub Documentation</title>
+    <>
+      <Head>
+          <title>Nitehub Documentation</title>
       </Head>
+    </>
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
       <div
         className={cn(
