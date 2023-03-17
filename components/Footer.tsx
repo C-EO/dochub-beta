@@ -6,6 +6,7 @@ import { ThemeSwitch } from "nextra-theme-docs";
 import { useTurboSite, TurboSite } from "./SiteSwitcher";
 
 const NITEHUB_URL = "https://git.c-eo.repl.co";
+const NITEHUB_DOCS_URL = "https://dochub.vercel.app";
 
 function FooterLink({ href, children }: { href: string; children: ReactNode }) {
   const classes =
@@ -31,7 +32,7 @@ function FooterHeader({ children }: { children: ReactNode }) {
 const navigation = {
   general: [
     { name: "Blog", href: "/blog" },
-    { name: "Releases", href: "https://github.com/vercel/turbo/releases" },
+    { name: "Releases", href: "https://github.com/nitehub-org/nitehub/releases" },
   ],
   repo: [
     { name: "Documentation", href: "/repo/docs" },
@@ -48,30 +49,24 @@ const navigation = {
   support: [
     {
       name: "GitHub",
-      href: "https://github.com/vercel/turbo",
+      href: "https://github.com/nitehub-org/nitehub",
     },
     {
       name: "Discord",
-      href: "https://turbo.build/discord",
+      href: "https://discord.gg/tEcXZ2FVuz",
     },
   ],
   company: (site: TurboSite) => [
-    { name: "Vercel", href: "https://vercel.com" },
+    { name: "Nitehub", href: NITEHUB_URL },
     {
       name: "Open Source Software",
-      href: "https://vercel.com/oss?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-ossLink",
+      href: `${NITEHUB_DOCS_URL}/oss`,
     },
-    {
-      name: "Contact Sales",
-      href: `https://vercel.com/${
-        site === "repo" ? "solutions" : "contact"
-      }/turborepo?utm_source=turbo.build&utm_medium=referral&utm_campaign=footer-enterpriseLink`,
-    },
-    { name: "Twitter", href: "https://twitter.com/vercel" },
+    { name: "Twitter", href: "https://twitter.com/nitehub_org" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
+    { name: "Privacy Notice", href: `${NITEHUB_DOCS_URL}/legal/privacy` },
+    { name: "Terms of Service", href: `${NITEHUB_DOCS_URL}/legal/tos` },
   ],
 };
 
@@ -97,7 +92,7 @@ export function FooterContent() {
                 </ul>
               </div>
               <div className="mt-12 md:!mt-0">
-                <FooterHeader>Turborepo</FooterHeader>
+                <FooterHeader>Nitehub</FooterHeader>
                 <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
                   {navigation.repo.map((item) => (
                     <li key={item.name}>
@@ -107,7 +102,7 @@ export function FooterContent() {
                 </ul>
               </div>
               <div className="mt-12 md:!mt-0">
-                <FooterHeader>Turbopack</FooterHeader>
+                <FooterHeader>Nitecel</FooterHeader>
                 <ul role="list" className="mt-4 space-y-1.5 list-none ml-0">
                   {navigation.pack.map((item) => (
                     <li key={item.name}>
@@ -151,7 +146,7 @@ export function FooterContent() {
           <div className="mt-12 xl:!mt-0">
             <FooterHeader>Subscribe to our newsletter</FooterHeader>
             <p className="mt-4 text-sm text-gray-600 dark:text-[#888888]">
-              Subscribe to the Turbo newsletter and stay updated on new releases
+              Subscribe to the Nitehub newsletter and stay updated on new releases
               and features, guides, and case studies.
             </p>
             <SubmitForm />
@@ -210,7 +205,7 @@ function SubmitForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="border-[#666666] dark:border-[#888888] w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white border rounded-md appearance-none dark:text-white sm:text-sm dark:bg-transparent focus:outline-none focus:ring-2 focus:ring-gray-800 dark:focus:border-white focus:placeholder-gray-400"
-        placeholder="you@example.com"
+        placeholder="johndoe@example.com"
       />
       <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
         <button
