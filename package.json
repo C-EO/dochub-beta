@@ -13,7 +13,7 @@
     "postbuild": "next-sitemap"
   },
   "author": "Dennis Sebalemba <dennis.sebalemba@gmail.com>",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/c-eo/dochub-beta.git"
