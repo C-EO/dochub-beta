@@ -140,7 +140,7 @@ function SiteCards() {
             <CardBadge>beta</CardBadge>
           </div>
           <p className="text-lg !w-[280px] md:!w-[340px] font-space-grotesk text-center opacity-50 dark:opacity-70 ">
-            A fast, light and reliable integration for Vercel made by Nitehub
+            A fast, light and reliable integration for Vercel made by Nitehub.
           </p>
         </Card>
       </FadeIn>
