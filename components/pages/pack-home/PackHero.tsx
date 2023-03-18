@@ -77,10 +77,9 @@ export function PackHero() {
             width="200"
             className="w-[160px] md:w-[200px] fill-black dark:fill-white"
           />
-          <HeroText h1>The Rust-powered successor to Webpack</HeroText>
+          <HeroText h1>The Nitehub integration for Vercel</HeroText>
           <SectionSubtext hero>
-            Turbopack is an incremental bundler optimized for JavaScript and
-            TypeScript, written in Rust.
+            Nitecel is an incremental deployment tool for Nitehub written for Vercel.
           </SectionSubtext>
         </FadeIn>
         <FadeIn
@@ -97,7 +96,7 @@ export function PackHero() {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/vercel/turbo"
+                href="https://github.com/nitehub-org/nitecel"
                 className="block py-3"
               >
                 GitHub
