@@ -29,7 +29,10 @@
     "display": "hidden"
   },
   "privacy": {
-    "title": "Privacy Policy",
-    "display": "hidden"
+    "title": "Privacy Notice",
+    "display": "hidden",
+    "theme": {
+      "toc": true
+    }
   }
 }
