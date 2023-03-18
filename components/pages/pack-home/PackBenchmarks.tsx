@@ -77,7 +77,7 @@ export function PackBenchmarks() {
       <div className="flex flex-col items-center gap-5 md:gap-6">
         <SectionHeader>Faster Than Fast</SectionHeader>
         <SectionSubtext>
-          Crafted by the creators of Webpack, Turbopack delivers unparalleled
+          Crafted by the creators of Nitehub, Nitecel delivers unparalleled
           performance at scale.
         </SectionSubtext>
       </div>
