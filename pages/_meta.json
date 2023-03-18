@@ -12,6 +12,7 @@
   },
   "repo": "Repo",
   "pack": "Pack",
+  "about": "About",
   "blog": {
     "title": "Blog",
     "theme": {
