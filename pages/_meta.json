@@ -30,8 +30,6 @@
   },
   "privacy": {
     "title": "Privacy Notice",
-    "theme": {
-      "toc": true
-    }
+    "display": "hidden",
   }
 }
