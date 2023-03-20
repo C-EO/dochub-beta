@@ -183,7 +183,7 @@ function LandingPage() {
             LIGHTWEIGHT FAST RELIABLE
           </h1>
           <p className="mx-6 text-xl max-h-[112px] md:max-h-[96px] w-[315px] md:w-[660px] md:text-2xl font-space-grotesk text-center text-[#666666] dark:text-[#888888]">
-            Nitehub is a lightweight, fast, and reliable platform developed by Nitehub Org. for the OSS community.
+            Nitehub is a lightweight, fast, and reliable privacy-friendly git platform developed by the Nitehub Org.
           </p>
         </FadeIn>
         <SiteCards />
