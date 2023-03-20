@@ -123,8 +123,7 @@ function SiteCards() {
           className="turborepoCardBg"
         >
           <p className="text-lg !w-[280px] md:!w-[340px] font-space-grotesk text-center opacity-50 dark:opacity-70">
-            High-performance build system for JavaScript and TypeScript
-            codebases.
+            Privacy-friendly software hosting platform.
           </p>
         </Card>
       </FadeIn>
